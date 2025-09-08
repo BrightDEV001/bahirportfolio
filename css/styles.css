@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+nav {
+  margin-top: 1px;
+  border: 1px solid #5a5656;
+  width: 100%;
+}
+nav .logo {
+  padding: 10px 50px;
+  font-size: larger;
+}
+.about-section {
+  /* margin-top: 20px; */
+  background-color: #141414;
+  padding: 50px;
+  width: 100%;
+  /* flex-wrap: wrap; */
+}
+.about-writeup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.about-writeup img {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 2px 5px 20px #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: flyIn 3.5s ease-out forwards;
+  /* max-height: 700px; */
+}
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.the-writing {
+  line-height: 30px;
+}
+.the-writing p {
+  font-size: 1.2em;
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+  /* flex-wrap: wrap; */
+}
+/* styling myskill start here */
+.myskill-section {
+  width: 100%;
+}
+.myskill-section h2 {
+  padding-bottom: 15px;
+}
+/* styling of the underline */
+.myskill-section .underline {
+  width: 25%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ffffff80, transparent);
+  border-radius: 1px;
+  margin-bottom: 50px;
+}
+.myskill-section .the-skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.the-skill .the-skill-one {
+  width: 100%;
+}
+.the-skill-one .skill p {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.myskill-section .skill {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.skill .skill-bar {
+  background-color: #ccc;
+  border-radius: 20px;
+  height: 10px;
+  position: relative;
+}
+.skill .skill-bar .skill-fill {
+  background-color: #2ec4b6;
+  height: 100%;
+  width: 0;
+  border-radius: 20px 0 0 20px;
+  position: relative;
+  transition: width 4s ease-in-out;
+}
+.skill-fill .percent-label {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  font-size: 16px;
+  color: #fff;
+}
+/* the skill bar styling end here */
+.experience-section h2 {
+  padding-bottom: 15px;
+}
+/* styling of the underline */
+.experience-section .underline {
+  width: 25%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ffffff80, transparent);
+  border-radius: 1px;
+  margin-bottom: 30px;
+}
+
+.experience-section {
+  line-height: 45px;
+  width: 100%;
+}
+.experience-section ul {
+  font-size: 20px;
+}
+.social-media {
+  margin-top: 20px;
+  padding: 0px 50px;
+}
+.social-media h3 {
+  color: #2ec4b6;
+  font-size: 25px;
+}
+.social-media p,
+i {
+  font-size: 20px;
+  line-height: 30px;
+}
+.social-media span {
+  font-weight: 900;
+}
+.social-media a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .about-writeup img {
+    /* width: 100%; */
+    max-width: 900px;
+  }
+  .experience-section ul {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-writeup img {
+    width: 50%;
+    display: block;
+    justify-self: center;
+  }
+  .about-writeup,
+  .hero-section {
+    flex-wrap: wrap;
+    /* font-size: 2em; */
+  }
+  .the-writing {
+    max-width: 100%;
+  }
+  .the-skill-one .skill p {
+    font-size: 20px;
+  }
+  .experience-section {
+    margin-top: -20px;
+  }
+  .experience-section ul {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .the-skill-one .skill p {
+    font-size: 16px;
+  }
+  .experience-section ul {
+    font-size: 20px;
+  }
+  .social-media p,
+  i {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  nav .logo {
+    padding: 10px 30px;
+  }
+  .about-writeup img {
+    margin-top: 20px;
+  }
+  .about-section,
+  .social-media {
+    padding: 0px 30px;
+  }
+  .experience-section ul {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .social-media h3 {
+    font-size: 20px;
+  }
+  .social-media p,
+  i {
+    font-size: 12px;
+  }
+}
