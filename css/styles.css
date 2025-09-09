@@ -167,7 +167,10 @@ i {
   text-decoration: none;
   color: #fff;
 }
-
+.social-media a:hover {
+  color: #2ec4b6;
+  font-weight: bolder;
+}
 /* Responsive styles */
 @media screen and (max-width: 1024px) {
   .about-writeup img {
